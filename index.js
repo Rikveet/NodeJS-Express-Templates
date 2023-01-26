@@ -1,4 +1,4 @@
-// Basic Hello world template
+// JWT template
 
 // Load .env
 const dotenv = require('dotenv')
@@ -8,15 +8,28 @@ dotenv.config()
 const express = require('express');
 const app = express();
 
-// request at localhost:PORT handler
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+const jwt = require('./jwt_handler');
+const crypto = require('crypto')
 
-// request with parameter
-app.get('/:name', (req, res)=>{
-    const {name} = req.params;
-    res.send(`Hello ${name}!!`);
+
+// login example
+// to test this you can search localhost:PORT/login/username&password
+app.get('/login', (req, res)=>{
+    const {username, password} = req.query;
+    // check user information
+    const session_token = crypto.randomUUID();
+    // store session token to the database
+    res.json({'token':jwt.generate(session_token),'uid':session_token})
+})
+
+// user request example with middleware
+app.get('/user/info',jwt.process, (req,res)=>{
+    const {payload} = req;
+    // get the user info from the server
+    res.json({
+        payload,
+        other_info:'ascxdacsdc'
+    })
 })
 
 // listen to port or default 3000
