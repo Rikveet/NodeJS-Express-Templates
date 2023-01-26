@@ -13,7 +13,7 @@ const crypto = require('crypto')
 
 
 // login example
-// to test this you can search localhost:PORT/login/username&password
+// to test this you can search localhost:PORT/login?username=xyz&password=xyz
 app.get('/login', (req, res)=>{
     const {username, password} = req.query;
     // check user information
