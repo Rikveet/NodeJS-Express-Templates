@@ -28,7 +28,7 @@ app.get('/user/info',jwt.process, (req,res)=>{
     // get the user info from the server
     res.json({
         payload,
-        other_info:'ascxdacsdc'
+        other_info:'This is some other info given by the server'
     })
 })
 
