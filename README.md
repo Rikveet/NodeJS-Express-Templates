@@ -9,7 +9,8 @@
 - Navigate to the route folder.
 - Run following commands. 
 - ```npm install```
-- ``node index.js``
+- ``npm start``
+- [Nodemon](https://nodemon.io/) package has been used to automatically restart the server on changes saved.
 
 ## Basics of server requests
 
