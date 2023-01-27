@@ -1,7 +1,3 @@
-
-<p style="float: left"></p><p href="https://github.com/Rikveet/REST-Templates/tree/Json-Web-Token" style="float: right">Next</p>
-<br/>
-
 # REST-Templates
 
 - This is the base node.js express server.
