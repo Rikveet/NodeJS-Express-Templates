@@ -1,4 +1,10 @@
+# Important changes:
 
+- To be able to communicate with backend without cors issue, proxy was used.
+- The backend api calls now begin with the api route. ```/api/___ instead of localhost:PORT/api/___```
+- This proxy was added to package.json.
+- This will make your browser think that it is requesting the same host.
+- There should be no changes required for production version.
 
 
 # Getting Started with Create React App

@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 // you can continue to define your api calls.
-app.get('/user/', (req, res) => {
+app.get('/api/user/', (req, res) => {
     console.log(req.query)
     try {
         const {username} = req.query

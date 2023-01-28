@@ -7,7 +7,7 @@ function App() {
     const [response, setResponse] = useState('')
     const handleQuery = async () => {
         if (query) {
-            axios.get(`user/?username=${query}`).then((resp) => {
+            axios.get(`/api/user/?username=${query}`).then((resp) => {
                 setResponse(JSON.stringify(resp, null, 2));
             }).catch(err => (setResponse(err)))
         }

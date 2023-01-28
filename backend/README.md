@@ -1,13 +1,5 @@
 # Static file serving
 
-- Express allows you to get your front-end application.
-- [More Info](https://expressjs.com/en/starter/static-files.html)
-
-# How to run
-
-- Open a terminal.
-- Navigate to the route folder.
-- Run following commands. 
-- ```npm install```
-- ``npm start``
-- [Nodemon](https://nodemon.io/) package has been used to automatically restart the server on changes saved.
+Changes from the branch [server_front_end_app](https://github.com/Rikveet/NodeJS-Express-Templates/tree/serve_front_end_app) :
+- The React build folder is now used to serve the front end upon request at /.
+- It is recommended to add /api in-front of your api endpoints to avoid conflicts of routes.
